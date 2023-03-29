@@ -30,7 +30,12 @@ class AppRoutes {
         route: '/listview2',
         name: 'ListView Tipo 2',
         screen: const ListView2Screen(),
-        icon: Icons.list_alt)
+        icon: Icons.list_alt),
+    MenuOption(
+        route: '/avatar',
+        name: 'Circule Avatar',
+        screen: const AvatarScreen(),
+        icon: Icons.supervised_user_circle_outlined)
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
