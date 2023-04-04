@@ -1,5 +1,4 @@
 import 'dart:math' show Random;
-
 import 'package:flutter/material.dart';
 
 class AnimatedScreen extends StatefulWidget {
@@ -19,8 +18,8 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
     final random = Random();
 
     // Generate a random width and height.
-    _width = random.nextInt(300).toDouble();
-    _height = random.nextInt(300).toDouble();
+    _width = random.nextInt(300).toDouble() + 10;
+    _height = random.nextInt(300).toDouble() + 10;
 
     // Generate a random color.
     _color = Color.fromRGBO(
@@ -28,6 +27,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       random.nextInt(256),
       random.nextInt(256),
       1,
+      // random.nextDouble(),
     );
 
     // Generate a random border radius.
@@ -43,9 +43,11 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         title: const Text('Animated Container'),
       ),
       body: Center(
-        child: Container(
+        child: AnimatedContainer(
           // color: Colors.red, //* no se puede tener el widget color junto con la propiedad
           //*decoration, por esto el color se mete dentro de decoration
+          duration: const Duration(milliseconds: 400),
+          curve: Curves.easeInOutBack,
           width: _width,
           height: _height,
           decoration: BoxDecoration(
