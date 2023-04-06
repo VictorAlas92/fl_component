@@ -4,8 +4,11 @@ class CustomInputField extends StatelessWidget {
   final String? hintText;
   final String? labelText;
   final String? helperText;
+  final bool autofocus;
+  final bool obscureText;
   final IconData? icon;
   final IconData? suffixicon;
+  final TextInputType? keyboardType;
 
   const CustomInputField({
     super.key,
@@ -14,14 +17,19 @@ class CustomInputField extends StatelessWidget {
     this.helperText,
     this.icon,
     this.suffixicon,
+    this.autofocus = false,
+    this.obscureText = false,
+    this.keyboardType,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      autofocus: false,
+      autofocus: autofocus,
       initialValue: '',
       textCapitalization: TextCapitalization.words,
+      keyboardType: keyboardType,
+      obscureText: obscureText,
       //*con la propiedad onchange podemos recolectar el valor de lo que se esta escribiendo
       //*en tiempo real
       onChanged: (value) {
