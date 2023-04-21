@@ -33,7 +33,7 @@ class CustomInputField extends StatelessWidget {
       //*con la propiedad onchange podemos recolectar el valor de lo que se esta escribiendo
       //*en tiempo real
       onChanged: (value) {
-        print(value);
+        print('value: $value');
       },
       validator: (value) {
         if (value == null) return 'este campo es requerido';
