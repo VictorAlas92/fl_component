@@ -27,23 +27,25 @@ class AppRoutes {
         screen: const ListView2Screen(),
         icon: Icons.list_alt),
     MenuOption(
-      route: '/avatar',
-      name: 'Circule Avatar',
-      screen: const AvatarScreen(),
-      icon: Icons.supervised_user_circle_outlined,
-    ),
+        route: '/avatar',
+        name: 'Circule Avatar',
+        screen: const AvatarScreen(),
+        icon: Icons.supervised_user_circle_outlined),
     MenuOption(
-      route: '/animated',
-      name: 'Animated Container',
-      screen: const AnimatedScreen(),
-      icon: Icons.play_circle_fill_outlined,
-    ),
+        route: '/animated',
+        name: 'Animated Container',
+        screen: const AnimatedScreen(),
+        icon: Icons.play_circle_fill_outlined),
     MenuOption(
-      route: '/inputs',
-      name: 'Text Inputs',
-      screen: const InputsScreen(),
-      icon: Icons.input_rounded,
-    ),
+        route: '/inputs',
+        name: 'Text Inputs',
+        screen: const InputsScreen(),
+        icon: Icons.input_rounded),
+    MenuOption(
+        route: '/slider',
+        name: 'Slider && checks',
+        screen: const sliderScreen(),
+        icon: Icons.sledding_outlined),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
